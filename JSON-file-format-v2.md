@@ -12,6 +12,8 @@ This is the current version in use.
 
 2.3 added IMPACT to DWF, new MANDATORY field.
 
+2.4 Moved IMPACT to description
+
 # Definition of terms
 
 ## OPTIONAL
@@ -61,10 +63,12 @@ This is the current version in use.
       }
     },
     "IMPACT": {
-      "DATA_VERSION": "2.3",
-      "eng": "Text data here",
-      "ger": "Textdaten hier",
-      "jpn": "ここにテキストデータ"
+      "DATA_VERSION": "2.4",
+            "DESCRIPTION": {
+            "eng": "Text data here",
+            "ger": "Textdaten hier",
+            "jpn": "ここにテキストデータ"
+            }
     },
     "CVSSv2": {
       "DATA_VERSION": "2.0",
