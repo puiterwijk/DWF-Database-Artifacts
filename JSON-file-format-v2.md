@@ -2,7 +2,7 @@
 
 This is the current version in use.
 
-# ChangeLog
+# ChangeLog by version
 
 2.0 initial version
 
@@ -14,25 +14,25 @@ This is the current version in use.
 
 2.4 Moved IMPACT to description
 
+## Other changes by date
+
+2016-11-13 Added Minimum CVE request file example and updated documentation, removed SUGGESTED keyword
+
 # Definition of terms
 
 ## OPTIONAL
 
-2.0: If a field is OPTIONAL it does not need to be included. 
+2.0: If a field is OPTIONAL it does not need to be included. As always more information is better then less information.
 
 ## MANDATORY
 
 2.0: If a field is MANDATORY it MUST be included or else the entry is invalid.
 
-## SUGGESTED
-
-2.0: If a field is SUGGESTED it SHOULD be included or else there is a strong chance the entry will not be accepted.
-
 # Full file example
 
 ```
 {
-  "DATA_VERSION": "2.1",
+  "DATA_VERSION": "2.4",
   "UPDATED": "DATE-TIMESTAMP",
   "SERIAL": "INT",
   "CVE_ID": "CVE-YEAR-NNNNNNN",
@@ -45,15 +45,15 @@ This is the current version in use.
   "STATE": "State of CVE",
   "TITLE": "Short title",
   "NOTES": {
-    "DATA_VERSION": "2.0",
+    "DATA_VERSION": "2.4",
     "eng": "Text data here",
     "ger": "Textdaten hier",
     "jpn": "ここにテキストデータ"
   },
   "DWF": {
-    "DATA_VERSION": "2.1",
+    "DATA_VERSION": "2.4",
     "PROBLEM_TYPE": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "CWE": "X",
       "OWASP": "X",
       "DESCRIPTION": {
@@ -71,7 +71,7 @@ This is the current version in use.
             }
     },
     "CVSSv2": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "BM": {
         "AV": "X",
         "AC": "X",
@@ -97,7 +97,7 @@ This is the current version in use.
       }
     },
     "CVSSv3": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "BM": {
         "AV": "X",
         "AC": "X",
@@ -132,7 +132,7 @@ This is the current version in use.
     },
     "AFFECTS": [
       {
-        "DATA_VERSION": "2.1",
+        "DATA_VERSION": "2.4",
         "VENDOR": "string",
         "PRODUCT": "string",
         "VERSION": "string",
@@ -150,14 +150,14 @@ This is the current version in use.
       }
     ],
     "DESCRIPTION": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "eng": "String description of issue",
       "ger": "String Beschreibung des Problems",
       "jpn": "問題の説明文字列"
     },
     "REFERENCES": [
       {
-        "DATA_VERSION": "2.0",
+        "DATA_VERSION": "2.4",
         "VERSION": "2.0",
         "NAME": "name of reference (can be URL)",
         "DESCRIPTION": {
@@ -176,20 +176,20 @@ This is the current version in use.
       }
     ],
     "EXPLOITATION": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "eng": "Text data here",
       "ger": "Textdaten hier",
       "jpn": "ここにテキストデータ"
     },
     "WORKAROUND": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "eng": "Text data here",
       "ger": "Textdaten hier",
       "jpn": "ここにテキストデータ"
     },
     "CREDITS": [
       {
-        "DATA_VERSION": "2.0",
+        "DATA_VERSION": "2.4",
         "ID": {
           "type-of-id_string": "string"
         },
@@ -200,7 +200,7 @@ This is the current version in use.
     ],
     "TIMELINE": [
       {
-        "DATA_VERSION": "2.0",
+        "DATA_VERSION": "2.4",
         "TIMESTAMP": "DATE-TIMESTAMP",
         "REFERENCE": {
           "type-of-id-string": "string"
@@ -213,7 +213,7 @@ This is the current version in use.
       }
     ],
     "SOURCE": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "DISCOVERED_BY": "X",
       "DISCOVERED_WITH": "X",
       "VERIFICATION": "X",
@@ -225,15 +225,15 @@ This is the current version in use.
     }
   },
   "COMMUNITY": {
-    "DATA_VERSION": "2.0"
+    "DATA_VERSION": "2.4"
   },
   "EXPERIMENTAL": {
-    "DATA_VERSION": "2.0"
+    "DATA_VERSION": "2.4"
   },
   "VENDOR": {
-    "DATA_VERSION": "2.0",
+    "DATA_VERSION": "2.4",
     "Example Vendor Name": {
-      "DATA_VERSION": "2.0",
+      "DATA_VERSION": "2.4",
       "PROBLEMTYPE": "same as in DWF section",
       "CVSSv2": "same as in DWF section",
       "CVSSv3": "same as in DWF section",
@@ -246,7 +246,7 @@ This is the current version in use.
       "TIMELINE": "same as in DWF section",
       "NOTES": "same as in DWF section",
       "Example Product Name": {
-        "DATA_VERSION": "2.0",
+        "DATA_VERSION": "2.4",
         "PROBLEMTYPE": "same as in DWF section",
         "CVSSv2": "same as in DWF section",
         "CVSSv3": "same as in DWF section",
@@ -266,11 +266,11 @@ This is the current version in use.
 
 # Minimum file example
 
-An example of a minimum file. Please note that the AFFECTS data is not MANDATORY but only SUGGESTED. The description is required for PUBLIC entries (that is to say published in our database), please consult our writing guidelines, alternatively if sufficient other data (AFFECTS, CVSSv2 or CVSSv3 scoring data and so on) is provided the DWF can write the entry (indeed it is our hope to automate descriptions based on data for the vulnerability). Simply search for "MINIMUM" to find the descriptions for the various components needed to make a minimal entry.
+An example of a minimum file entry for the DWF. The description is required for PUBLIC entries (that is to say published in our database), please consult our writing guidelines, alternatively if sufficient other data (AFFECTS, CVSSv2 or CVSSv3 scoring data and so on) is provided the DWF can write the entry (indeed it is our hope to automate descriptions based on data for the vulnerability). Simply search for "MINIMUM" to find the descriptions for the various components needed to make a minimal entry. Many of the fields are created by the DWF (e.g. CVE number and the creation date).
 
 ```
 {
-  "DATA_VERSION": "2.2",
+  "DATA_VERSION": "2.4",
   "UPDATED": "DATE-TIMESTAMP",
   "SERIAL": "INT",
   "CVE_ID": "CVE-YEAR-NNNNNNN",
@@ -291,10 +291,53 @@ An example of a minimum file. Please note that the AFFECTS data is not MANDATORY
       }
     },
     "IMPACT": {
-      "DATA_VERSION": "2.3",
+      "DATA_VERSION": "2.4",
       "eng": "Text data here",
       "ger": "Textdaten hier",
       "jpn": "ここにテキストデータ"
+    },
+    "AFFECTS": [
+      {
+        "PRODUCT": "string",
+        "AFFECTED": [
+          "1.0"
+        ]
+      }
+    ],
+    "DESCRIPTION": {
+      "eng": "String description of issue"
+    },
+    "REFERENCES": [
+      {
+        "FILES": [
+          {
+            "URL": "URL to reference",
+            "LOCALNAME": "local filename"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+# Minimum CVE request file example
+
+An example of a minimum CVE request file entry for the DWF. 
+
+```
+{
+  "DATA_VERSION": "2.4",
+  "REQUESTER": "Requestor ID",
+  "DWF": {
+    "PROBLEM_TYPE": {
+      "DESCRIPTION": {
+        "eng": "String description of issue"
+      }
+    },
+    "IMPACT": {
+      "DATA_VERSION": "2.4",
+      "eng": "Text data here"
     },
     "AFFECTS": [
       {
@@ -339,15 +382,15 @@ An example of a minimum file. Please note that the AFFECTS data is not MANDATORY
 
 # DATE_REQUESTED
 
-2.2: Date the CVE was requested, OPTIONAL
+2.2: Date the CVE was requested. Generated by DWF. MANDATORY
 
 # DATE_ASSIGNED
 
-2.2: Date the CVE was assigned, typically generated by DWF
+2.2: Date the CVE was assigned. Generated by DWF. MANDATORY
 
 # DATE_PUBLIC
 
-2.2: Date the CVE went public, OPTIONAL
+2.2: Date the CVE went public. Generated by DWF. MANDATORY
 
 # REQUESTER
 
@@ -367,7 +410,7 @@ An example of a minimum file. Please note that the AFFECTS data is not MANDATORY
 
 # TITLE 
 
-2.2: short title for the CVE
+2.2: short title for the CVE, in case the description is very long.
 
 # NOTES
 
@@ -387,11 +430,11 @@ The problem type, a list of objects in the form of identifier and a value, curre
 
 ### CWE
 
-2.0: The CWE ID in the form "CWE-N" or a string of vulnerabilities that describe this issue, comma separated (e.g. "CWE-N,CWE-N2"). SUGGESTED
+2.0: The CWE ID in the form "CWE-N" or a string of vulnerabilities that describe this issue, comma separated (e.g. "CWE-N,CWE-N2"). 
 
 ### OWASP 
 
-2.0: The OWASP ID in the form "AN" or a string of vulnerabilities that describe this issue, comma separated (e.g. "AB,AC") please see https://www.owasp.org/index.php/OWASP_Periodic_Table_of_Vulnerabilities#Periodic_Table_of_Vulnerabilities for the official list. SUGGESTED
+2.0: The OWASP ID in the form "AN" or a string of vulnerabilities that describe this issue, comma separated (e.g. "AB,AC") please see https://www.owasp.org/index.php/OWASP_Periodic_Table_of_Vulnerabilities#Periodic_Table_of_Vulnerabilities for the official list. 
 
 ### DESCRIPTION
 
@@ -595,7 +638,7 @@ The problem type, a list of objects in the form of identifier and a value, curre
 
 ### VENDOR
 
-2.0: The vendor name. SUGGESTED
+2.0: The vendor name. 
 
 ### PRODUCT
 
@@ -603,7 +646,7 @@ The problem type, a list of objects in the form of identifier and a value, curre
 
 ### VERSION
 
-2.0: The version of the product. SUGGESTED
+2.0: The version of the product. 
 
 ### URL
 
@@ -623,7 +666,7 @@ The problem type, a list of objects in the form of identifier and a value, curre
 
 ### FIXEDIN
 
-2.0: The version of the product that is fixed. This is an array of one or more values, the values can be a version number, or a version number with ">" (greater then, not including the version specified), "<" (less then, not including the version specified), ">=" (greater then or equal to, so including the version specified) or "<=" (less then or equal to, so including the version specified) prepended to it. Needed for the MINIMUM entry. SUGGESTED
+2.0: The version of the product that is fixed. This is an array of one or more values, the values can be a version number, or a version number with ">" (greater then, not including the version specified), "<" (less then, not including the version specified), ">=" (greater then or equal to, so including the version specified) or "<=" (less then or equal to, so including the version specified) prepended to it.
 
 ## DESCRIPTION
 
@@ -713,7 +756,7 @@ Additional documentation on these roles is planned. OPTIONAL
 
 ### TIMESTAMP
 
-2.0: A formatted TIMESTAMP. MANDATORY for any TIMELINE entry.
+2.0: A formatted TIMESTAMP. 
 
 ### REFERENCE
 
@@ -723,7 +766,7 @@ Additional documentation on these roles is planned. OPTIONAL
 
 ### TEXT
 
-2.0: The text of the TIMELINE item, e.g. "Notified Vendor X via email". MANDATORY for any TIMELINE entry.
+2.0: The text of the TIMELINE item, e.g. "Notified Vendor X via email". 
 
 ## NOTES
 
