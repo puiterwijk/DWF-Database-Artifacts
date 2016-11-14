@@ -662,7 +662,7 @@ The problem type, a list of objects in the form of identifier and a value, curre
 
 ### AFFECTED
 
-2.0: The version of the product that is vulnerable. This is an array of one or more values, the values can be a version number, or a version number with ">" (greater then, not including the version specified), "<" (less then, not including the version specified), ">=" (greater then or equal to, so including the version specified) or "<=" (less then or equal to, so including the version specified) prepended to it. Needed for the MINIMUM entry. MANDATORY OR CPE
+2.0: The version of the product that is vulnerable. This is an array of one or more values, the values can be a version number, or a version number with ">" (greater then, not including the version specified), "<" (less then, not including the version specified), ">=" (greater then or equal to, so including the version specified) or "<=" (less then or equal to, so including the version specified) prepended to it. Needed for the MINIMUM entry. MANDATORY or use CPE or SWID
 
 ### FIXEDIN
 
@@ -708,7 +708,7 @@ The description is required. Needed for the MINIMUM entry. MANDATORY. This secti
 
 #### LOCALNAME
 
-2.0: The local name (file or directory) of the artifact, relative to directory for this CVE. Needed for the MINIMUM entry. OPTIONAL
+2.0: The local name (file or directory) of the artifact, relative to directory for this CVE. OPTIONAL
 
 ## EXPLOITATION
 
