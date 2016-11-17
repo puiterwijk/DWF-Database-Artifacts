@@ -332,7 +332,7 @@ An example of a minimum CVE request file entry for the DWF.
   "DWF": {
     "PROBLEM_TYPE": {
       "DESCRIPTION": {
-        "eng": "String description of issue"
+        "eng": "String description of issue, OR you can use the CWE OR the OWASP"
       }
     },
     "IMPACT": {
