@@ -1,0 +1,1565 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Root schema.",
+  "description": "An explanation about the purpose of this instance.",
+  "properties": {
+    "DATA_VERSION": {
+      "type": "string",
+      "minLength": 1,
+      "title": "DATA_VERSION schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "3.0"
+    },
+    "CVE_ID": {
+      "type": "string",
+      "minLength": 1,
+      "title": "CVE_ID schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "CVE-YEAR-NNNNNNN"
+    },
+    "UPDATED": {
+      "type": "string",
+      "minLength": 1,
+      "title": "UPDATED schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "DATE-TIMESTAMP"
+    },
+    "SERIAL": {
+      "type": "string",
+      "minLength": 1,
+      "title": "SERIAL schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "INT"
+    },
+    "DATE_REQUESTED": {
+      "type": "string",
+      "minLength": 1,
+      "title": "DATE_REQUESTED schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "DATE-TIMESTAMP"
+    },
+    "DATE_ASSIGNED": {
+      "type": "string",
+      "minLength": 1,
+      "title": "DATE_ASSIGNED schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "DATE-TIMESTAMP"
+    },
+    "DATE_PUBLIC": {
+      "type": "string",
+      "minLength": 1,
+      "title": "DATE_PUBLIC schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "DATE_PUBLIC"
+    },
+    "REQUESTER": {
+      "type": "string",
+      "minLength": 1,
+      "title": "REQUESTER schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "Requestor ID"
+    },
+    "ASSIGNER": {
+      "type": "string",
+      "minLength": 1,
+      "title": "ASSIGNER schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "Assigner ID"
+    },
+    "STATE": {
+      "type": "string",
+      "minLength": 1,
+      "title": "STATE schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "State of CVE"
+    },
+    "REPLACED_BY": {
+      "type": "string",
+      "minLength": 1,
+      "title": "REPLACED_BY schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "replaced by data"
+    },
+    "BRAND_NAME": {
+      "type": "object",
+      "title": "BRAND_NAME schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "eng": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Eng schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Short string description of issue"
+        },
+        "ger": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Ger schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Kleine string Beschreibung des Problems"
+        },
+        "jpn": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Jpn schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "問題の説明文字列"
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "eng",
+        "ger",
+        "jpn"
+      ]
+    },
+    "TITLE": {
+      "type": "object",
+      "title": "TITLE schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "eng": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Eng schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Short string description of issue"
+        },
+        "ger": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Ger schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Kleine string Beschreibung des Problems"
+        },
+        "jpn": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Jpn schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "問題の説明文字列"
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "eng",
+        "ger",
+        "jpn"
+      ]
+    },
+    "DESCRIPTION": {
+      "type": "object",
+      "title": "DESCRIPTION schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "eng": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Eng schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "String description of issue"
+        },
+        "ger": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Ger schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "String Beschreibung des Problems"
+        },
+        "jpn": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Jpn schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "問題の説明文字列"
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "eng",
+        "ger",
+        "jpn"
+      ]
+    },
+    "ATTACK": {
+      "type": "object",
+      "title": "ATTACK schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "ATTACKERS": {
+          "type": "object",
+          "title": "ATTACKERS schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "extent": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Extent schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "string"
+            },
+            "authentication": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Authentication schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "string"
+            },
+            "user_assistance": {
+              "type": "string",
+              "minLength": 1,
+              "title": "User_assistance schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "string"
+            }
+          },
+          "required": [
+            "extent",
+            "authentication",
+            "user_assistance"
+          ]
+        },
+        "IMPACT": {
+          "type": "object",
+          "title": "IMPACT schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "eng": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Eng schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Text data here"
+            },
+            "ger": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Ger schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Textdaten hier"
+            },
+            "jpn": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Jpn schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "ここにテキストデータ"
+            }
+          },
+          "required": [
+            "eng",
+            "ger",
+            "jpn"
+          ]
+        },
+        "ATTACK_METHODS": {
+          "type": "object",
+          "title": "ATTACK_METHODS schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "VECTORS": {
+              "type": "array",
+              "uniqueItems": false,
+              "title": "VECTORS schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "title": "0 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "item"
+              }
+            },
+            "COMPONENTS": {
+              "type": "array",
+              "uniqueItems": false,
+              "title": "COMPONENTS schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "title": "0 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "item"
+              }
+            },
+            "CAPECS": {
+              "type": "array",
+              "uniqueItems": false,
+              "title": "CAPECS schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "title": "0 schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "item"
+              }
+            }
+          },
+          "required": [
+            "VECTORS",
+            "COMPONENTS",
+            "CAPECS"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "ATTACKERS",
+        "IMPACT",
+        "ATTACK_METHODS"
+      ]
+    },
+    "IMPACT_METRICS": {
+      "type": "object",
+      "title": "IMPACT_METRICS schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "CVSS": {
+          "type": "object",
+          "title": "CVSS schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "2": {
+              "type": "object",
+              "title": "2 schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "properties": {
+                "BM": {
+                  "type": "object",
+                  "title": "BM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "AV": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AV schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "AC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "AU": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AU schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "C": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "C schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "I": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "I schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "A": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "A schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "AV",
+                    "AC",
+                    "AU",
+                    "C",
+                    "I",
+                    "A",
+                    "SCORE"
+                  ]
+                },
+                "TM": {
+                  "type": "object",
+                  "title": "TM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "E": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "E schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "RL": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "RL schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "RC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "RC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "E",
+                    "RL",
+                    "RC",
+                    "SCORE"
+                  ]
+                },
+                "EM": {
+                  "type": "object",
+                  "title": "EM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "CDP": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "CDP schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "TD": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "TD schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "CR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "CR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "IR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "IR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "AR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "CDP",
+                    "TD",
+                    "CR",
+                    "IR",
+                    "AR",
+                    "SCORE"
+                  ]
+                }
+              },
+              "required": [
+                "BM",
+                "TM",
+                "EM"
+              ]
+            },
+            "3": {
+              "type": "object",
+              "title": "3 schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "properties": {
+                "BM": {
+                  "type": "object",
+                  "title": "BM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "AV": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AV schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "AC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "PR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "PR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "UI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "UI schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "S": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "S schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "C": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "C schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "I": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "I schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "A": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "A schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "AV",
+                    "AC",
+                    "PR",
+                    "UI",
+                    "S",
+                    "C",
+                    "I",
+                    "A",
+                    "SCORE"
+                  ]
+                },
+                "TM": {
+                  "type": "object",
+                  "title": "TM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "E": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "E schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "RL": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "RL schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "RC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "RC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "E",
+                    "RL",
+                    "RC",
+                    "SCORE"
+                  ]
+                },
+                "EM": {
+                  "type": "object",
+                  "title": "EM schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "properties": {
+                    "CR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "CR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "IR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "IR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "AR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "AR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MAV": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MAV schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MAC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MAC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MPR": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MPR schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MUI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MUI schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MS": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MS schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MC": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MC schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MI": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MI schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "MA": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "MA schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "X"
+                    },
+                    "SCORE": {
+                      "type": "string",
+                      "minLength": 1,
+                      "title": "SCORE schema.",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "N.N"
+                    }
+                  },
+                  "required": [
+                    "CR",
+                    "IR",
+                    "AR",
+                    "MAV",
+                    "MAC",
+                    "MPR",
+                    "MUI",
+                    "MS",
+                    "MC",
+                    "MI",
+                    "MA",
+                    "SCORE"
+                  ]
+                }
+              },
+              "required": [
+                "BM",
+                "TM",
+                "EM"
+              ]
+            }
+          },
+          "required": [
+            "2",
+            "3"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "CVSS"
+      ]
+    },
+    "PROBLEM_TYPE": {
+      "type": "object",
+      "title": "PROBLEM_TYPE schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "CWE": {
+          "type": "string",
+          "minLength": 1,
+          "title": "CWE schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "X"
+        },
+        "OWASP": {
+          "type": "string",
+          "minLength": 1,
+          "title": "OWASP schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "X"
+        },
+        "DESCRIPTION": {
+          "type": "object",
+          "title": "DESCRIPTION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "eng": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Eng schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "String description of issue"
+            },
+            "ger": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Ger schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "String Beschreibung des Problems"
+            },
+            "jpn": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Jpn schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "問題の説明文字列"
+            }
+          },
+          "required": [
+            "eng",
+            "ger",
+            "jpn"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "CWE",
+        "OWASP",
+        "DESCRIPTION"
+      ]
+    },
+    "AFFECTS": {
+      "type": "object",
+      "title": "AFFECTS schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "CPE": {
+          "type": "array",
+          "uniqueItems": false,
+          "title": "CPE schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "items": {
+            "type": "object",
+            "title": "0 schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "cpe string": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Cpe string schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "=/>/</<=/>=/!"
+              }
+            },
+            "required": [
+              "cpe string"
+            ]
+          }
+        },
+        "SWID": {
+          "type": "array",
+          "uniqueItems": false,
+          "title": "SWID schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "items": {
+            "type": "object",
+            "title": "0 schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "swid string": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Swid string schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "=/>/</<=/>=/!"
+              }
+            },
+            "required": [
+              "swid string"
+            ]
+          }
+        },
+        "PRODUCTS": {
+          "type": "object",
+          "title": "PRODUCTS schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "VENDOR NAME": {
+              "type": "object",
+              "title": "VENDOR NAME schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "properties": {
+                "PRODUCT NAME": {
+                  "type": "array",
+                  "uniqueItems": false,
+                  "title": "PRODUCT NAME schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "items": {
+                    "type": "object",
+                    "title": "0 schema.",
+                    "description": "An explanation about the purpose of this instance.",
+                    "properties": {
+                      "vulnerable version string": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Vulnerable version string schema.",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "=/>/</<=/>=/!"
+                      }
+                    },
+                    "required": [
+                      "vulnerable version string"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "PRODUCT NAME"
+              ]
+            }
+          },
+          "required": [
+            "VENDOR NAME"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "CPE",
+        "SWID",
+        "PRODUCTS"
+      ]
+    },
+    "EXPLOITATION": {
+      "type": "object",
+      "title": "EXPLOITATION schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "DESCRIPTION": {
+          "type": "object",
+          "title": "DESCRIPTION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "eng": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Eng schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Text data here"
+            },
+            "ger": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Ger schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Textdaten hier"
+            },
+            "jpn": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Jpn schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "ここにテキストデータ"
+            }
+          },
+          "required": [
+            "eng",
+            "ger",
+            "jpn"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "DESCRIPTION"
+      ]
+    },
+    "WORKAROUND": {
+      "type": "object",
+      "title": "WORKAROUND schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "DESCRIPTION": {
+          "type": "object",
+          "title": "DESCRIPTION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "eng": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Eng schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Text data here"
+            },
+            "ger": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Ger schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "Textdaten hier"
+            },
+            "jpn": {
+              "type": "string",
+              "minLength": 1,
+              "title": "Jpn schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "ここにテキストデータ"
+            }
+          },
+          "required": [
+            "eng",
+            "ger",
+            "jpn"
+          ]
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "DESCRIPTION"
+      ]
+    },
+    "NOTES": {
+      "type": "object",
+      "title": "NOTES schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "eng": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Eng schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Text data here"
+        },
+        "ger": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Ger schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "Textdaten hier"
+        },
+        "jpn": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Jpn schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "ここにテキストデータ"
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "eng",
+        "ger",
+        "jpn"
+      ]
+    },
+    "CREDIT": {
+      "type": "array",
+      "uniqueItems": false,
+      "title": "CREDIT schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "DATA_VERSION": {
+            "type": "string",
+            "minLength": 1,
+            "title": "DATA_VERSION schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "3.0"
+          },
+          "ID": {
+            "type": "string",
+            "minLength": 1,
+            "title": "ID schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "DATE-TIMESTAMP"
+          },
+          "TYPEOFID": {
+            "type": "string",
+            "minLength": 1,
+            "title": "TYPEOFID schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "string"
+          },
+          "ROLE": {
+            "type": "array",
+            "uniqueItems": false,
+            "title": "ROLE schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "title": "0 schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "role"
+            }
+          }
+        },
+        "required": [
+          "DATA_VERSION",
+          "ID",
+          "TYPEOFID",
+          "ROLE"
+        ]
+      }
+    },
+    "TIMELINE": {
+      "type": "array",
+      "uniqueItems": false,
+      "title": "TIMELINE schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "DATA_VERSION": {
+            "type": "string",
+            "minLength": 1,
+            "title": "DATA_VERSION schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "3.0"
+          },
+          "TIMESTAMP": {
+            "type": "string",
+            "minLength": 1,
+            "title": "TIMESTAMP schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "DATE-TIMESTAMP"
+          },
+          "REFERENCE": {
+            "type": "object",
+            "title": "REFERENCE schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "type-of-id-string": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Type-of-id-string schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "string"
+              }
+            },
+            "required": [
+              "type-of-id-string"
+            ]
+          },
+          "TEXT": {
+            "type": "object",
+            "title": "TEXT schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "eng": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Eng schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "Text data here"
+              },
+              "ger": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Ger schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "Textdaten hier"
+              },
+              "jpn": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Jpn schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "ここにテキストデータ"
+              }
+            },
+            "required": [
+              "eng",
+              "ger",
+              "jpn"
+            ]
+          }
+        },
+        "required": [
+          "DATA_VERSION",
+          "TIMESTAMP",
+          "REFERENCE",
+          "TEXT"
+        ]
+      }
+    },
+    "SOURCE": {
+      "type": "object",
+      "title": "SOURCE schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "DATA_VERSION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DATA_VERSION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "3.0"
+        },
+        "DISCOVERED_BY": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DISCOVERED_BY schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "string"
+        },
+        "DISCOVERED_WITH": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DISCOVERED_WITH schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "string"
+        },
+        "VERIFICATION": {
+          "type": "string",
+          "minLength": 1,
+          "title": "VERIFICATION schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "string"
+        },
+        "CNA_CHAIN": {
+          "type": "array",
+          "uniqueItems": false,
+          "title": "CNA_CHAIN schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "title": "2 schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "root CNA"
+          }
+        }
+      },
+      "required": [
+        "DATA_VERSION",
+        "DISCOVERED_BY",
+        "DISCOVERED_WITH",
+        "VERIFICATION",
+        "CNA_CHAIN"
+      ]
+    },
+    "REFERENCES": {
+      "type": "array",
+      "uniqueItems": false,
+      "title": "REFERENCES schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "items": {
+        "type": "object",
+        "title": "0 schema.",
+        "description": "An explanation about the purpose of this instance.",
+        "properties": {
+          "DATA_VERSION": {
+            "type": "string",
+            "minLength": 1,
+            "title": "DATA_VERSION schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "3.0"
+          },
+          "NAME": {
+            "type": "string",
+            "minLength": 1,
+            "title": "NAME schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "name of reference (can be URL)"
+          },
+          "DESCRIPTION": {
+            "type": "object",
+            "title": "DESCRIPTION schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+              "eng": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Eng schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "String description of reference"
+              },
+              "ger": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Ger schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "String Beschreibung des Reference"
+              },
+              "jpn": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Jpn schema.",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "問題の説明文字列"
+              }
+            },
+            "required": [
+              "eng",
+              "ger",
+              "jpn"
+            ]
+          },
+          "FILES": {
+            "type": "array",
+            "uniqueItems": false,
+            "title": "FILES schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "items": {
+              "type": "object",
+              "title": "0 schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "properties": {
+                "URL": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "URL schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "URL to reference"
+                },
+                "IMPORTTIME": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "IMPORTTIME schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "DATE-TIMESTAMP"
+                },
+                "LOCALNAME": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "LOCALNAME schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "local filename"
+                },
+                "PRIMARY_FILE": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "PRIMARY_FILE schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "filename"
+                }
+              },
+              "required": [
+                "URL",
+                "IMPORTTIME",
+                "LOCALNAME",
+                "PRIMARY_FILE"
+              ]
+            }
+          }
+        },
+        "required": [
+          "DATA_VERSION",
+          "NAME",
+          "DESCRIPTION",
+          "FILES"
+        ]
+      }
+    },
+    "DWF": {
+      "type": "object",
+      "title": "DWF schema.",
+      "description": "An explanation about the purpose of this instance.",
+      "properties": {
+        "VENDOR": {
+          "type": "object",
+          "title": "VENDOR schema.",
+          "description": "An explanation about the purpose of this instance.",
+          "properties": {
+            "DATA_VERSION": {
+              "type": "string",
+              "minLength": 1,
+              "title": "DATA_VERSION schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "3.0"
+            },
+            "Example Vendor Name": {
+              "type": "object",
+              "title": "Example Vendor Name schema.",
+              "description": "An explanation about the purpose of this instance.",
+              "properties": {
+                "TITLE": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "TITLE schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "DESCRIPTION": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "DESCRIPTION schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "ATTACK": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "ATTACK schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "IMPACT_METRICS": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "IMPACT_METRICS schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "PROBLEM_TYPE": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "PROBLEM_TYPE schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "AFFECTS": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "AFFECTS schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "only used if conflicting"
+                },
+                "EXPLOITATION": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "EXPLOITATION schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "WORKAROUND": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "WORKAROUND schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "NOTES": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "NOTES schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "CREDIT": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "CREDIT schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                },
+                "TIMELINE": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "TIMELINE schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "same as root"
+                }
+              },
+              "required": [
+                "TITLE",
+                "DESCRIPTION",
+                "ATTACK",
+                "IMPACT_METRICS",
+                "PROBLEM_TYPE",
+                "AFFECTS",
+                "EXPLOITATION",
+                "WORKAROUND",
+                "NOTES",
+                "CREDIT",
+                "TIMELINE"
+              ]
+            }
+          },
+          "required": [
+            "DATA_VERSION",
+            "Example Vendor Name"
+          ]
+        }
+      },
+      "required": [
+        "VENDOR"
+      ]
+    }
+  },
+  "required": [
+    "DATA_VERSION",
+    "CVE_ID",
+    "UPDATED",
+    "SERIAL",
+    "DATE_REQUESTED",
+    "DATE_ASSIGNED",
+    "DATE_PUBLIC",
+    "REQUESTER",
+    "ASSIGNER",
+    "STATE",
+    "REPLACED_BY",
+    "BRAND_NAME",
+    "TITLE",
+    "DESCRIPTION",
+    "ATTACK",
+    "IMPACT_METRICS",
+    "PROBLEM_TYPE",
+    "AFFECTS",
+    "EXPLOITATION",
+    "WORKAROUND",
+    "NOTES",
+    "CREDIT",
+    "TIMELINE",
+    "SOURCE",
+    "REFERENCES",
+    "DWF"
+  ]
+}
+
