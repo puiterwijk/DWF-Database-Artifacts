@@ -1,54 +1,59 @@
 {
   "DATA_VERSION": "3.0",
-  "CVE_ID": "CVE-YEAR-NNNNNNN",
+  "CVE_ID": "string CVE-YEAR-NNNNNNN",
   "UPDATED": "DATE-TIMESTAMP",
   "SERIAL": "INT",
   "DATE_REQUESTED": "DATE-TIMESTAMP",
   "DATE_ASSIGNED": "DATE-TIMESTAMP",
-  "DATE_PUBLIC": "DATE_PUBLIC",
-  "REQUESTER": "Requestor ID",
-  "ASSIGNER": "Assigner ID",
-  "STATE": "State of CVE",
-  "REPLACED_BY": "replaced by data",
-  "BRAND_NAME": {
-    "DATA_VERSION": "3.0",
-    "eng": "Short string description of issue",
-    "ger": "Kleine string Beschreibung des Problems",
-    "jpn": "問題の説明文字列"
-  },
-  "TITLE": {
-    "DATA_VERSION": "3.0",
-    "eng": "Short string description of issue",
-    "ger": "Kleine string Beschreibung des Problems",
-    "jpn": "問題の説明文字列"
-  },
-  "DESCRIPTION": {
-    "DATA_VERSION": "3.0",
-    "eng": "String description of issue",
-    "ger": "String Beschreibung des Problems",
-    "jpn": "問題の説明文字列"
-  },
+  "DATE_PUBLIC": "DATE-TIMESTAMP",
+  "REQUESTER": "string Requestor ID",
+  "ASSIGNER": "string: Assigner ID",
+  "STATE": "string state of CVE",
+  "REPLACED_BY": "string replaced by data",
+  "BRAND_NAME": [
+    {
+      "DATA_VERSION": "3.0",
+      "LANG": "string ISO 639-2",
+      "VALUE": "string brand name associated with the issue"
+    }
+  ],
+  "TITLE": [
+    {
+      "DATA_VERSION": "3.0",
+      "LANG": "string ISO 639-2",
+      "VALUE": "string Short title of issue"
+    }
+  ],
+  "DESCRIPTION": [
+    {
+      "DATA_VERSION": "3.0",
+      "LANG": "string ISO 639-2",
+      "VALUE": "string description of issue"
+    }
+  ],
   "ATTACK": {
     "DATA_VERSION": "3.0",
     "ATTACKERS": {
-      "extent": "string",
-      "authentication": "string",
-      "user_assistance": "string"
+      "EXTENT": "string",
+      "AUTHENTICATION": "string",
+      "USER_ASSISTANCE": "string"
     },
-    "IMPACT": {
-      "eng": "Text data here",
-      "ger": "Textdaten hier",
-      "jpn": "ここにテキストデータ"
-    },
+    "IMPACT": [
+      {
+        "DATA_VERSION": "3.0",
+        "LANG": "string ISO 639-2",
+        "VALUE": "string description of issue"
+      }
+    ],
     "ATTACK_METHODS": {
       "VECTORS": [
-        "item"
+        "string"
       ],
       "COMPONENTS": [
-        "item"
+        "string"
       ],
       "CAPECS": [
-        "item"
+        "string"
       ]
     }
   },
@@ -56,119 +61,137 @@
     "DATA_VERSION": "3.0",
     "CVSS": {
       "2": {
+        "DATA_VERSION": "3.0",
         "BM": {
-          "AV": "X",
-          "AC": "X",
-          "AU": "X",
-          "C": "X",
-          "I": "X",
-          "A": "X",
-          "SCORE": "N.N"
+          "AV": "string",
+          "AC": "string",
+          "AU": "string",
+          "C": "string",
+          "I": "string",
+          "A": "string",
+          "SCORE": "string N.N"
         },
         "TM": {
-          "E": "X",
-          "RL": "X",
-          "RC": "X",
-          "SCORE": "N.N"
+          "E": "string",
+          "RL": "string",
+          "RC": "string",
+          "SCORE": "string N.N"
         },
         "EM": {
-          "CDP": "X",
-          "TD": "X",
-          "CR": "X",
-          "IR": "X",
-          "AR": "X",
-          "SCORE": "N.N"
+          "CDP": "string",
+          "TD": "string",
+          "CR": "string",
+          "IR": "string",
+          "AR": "string",
+          "SCORE": "string N.N"
         }
       },
       "3": {
+        "DATA_VERSION": "3.0",
         "BM": {
-          "AV": "X",
-          "AC": "X",
-          "PR": "X",
-          "UI": "X",
-          "S": "X",
-          "C": "X",
-          "I": "X",
-          "A": "X",
-          "SCORE": "N.N"
+          "AV": "string",
+          "AC": "string",
+          "PR": "string",
+          "UI": "string",
+          "S": "string",
+          "C": "string",
+          "I": "string",
+          "A": "string",
+          "SCORE": "string N.N"
         },
         "TM": {
-          "E": "X",
-          "RL": "X",
-          "RC": "X",
-          "SCORE": "N.N"
+          "E": "string",
+          "RL": "string",
+          "RC": "string",
+          "SCORE": "string N.N"
         },
         "EM": {
-          "CR": "X",
-          "IR": "X",
-          "AR": "X",
-          "MAV": "X",
-          "MAC": "X",
-          "MPR": "X",
-          "MUI": "X",
-          "MS": "X",
-          "MC": "X",
-          "MI": "X",
-          "MA": "X",
-          "SCORE": "N.N"
+          "CR": "string",
+          "IR": "string",
+          "AR": "string",
+          "MAV": "string",
+          "MAC": "string",
+          "MPR": "string",
+          "MUI": "string",
+          "MS": "string",
+          "MC": "string",
+          "MI": "string",
+          "MA": "string",
+          "SCORE": "string N.N"
         }
-      }
+      },
+      "DATA_VERSION": "3.0"
     }
   },
   "PROBLEM_TYPE": {
     "DATA_VERSION": "3.0",
-    "CWE": "X",
-    "OWASP": "X",
-    "DESCRIPTION": {
-      "eng": "String description of issue",
-      "ger": "String Beschreibung des Problems",
-      "jpn": "問題の説明文字列"
-    }
+    "CWE": "string",
+    "OWASP": "string",
+    "DESCRIPTION": [
+      {
+        "DATA_VERSION": "3.0",
+        "LANG": "string ISO 639-2",
+        "VALUE": "string description of issue"
+      }
+    ]
   },
   "AFFECTS": {
     "DATA_VERSION": "3.0",
     "CPE": [
       {
-        "cpe string": "=/>/</<=/>=/!"
+        "DATA_VERSION": "3.0",
+        "CPE_VALUE": "string",
+        "AFFECTS": "string =/>/</<=/>=/!"
       }
     ],
     "SWID": [
       {
-        "swid string": "=/>/</<=/>=/!"
+        "DATA_VERSION": "3.0",
+        "SWID_VALUE": "string",
+        "AFFECTS": "string =/>/</<=/>=/!"
       }
     ],
-    "PRODUCTS": {
-      "VENDOR NAME": {
-        "PRODUCT NAME": [
+    "PRODUCTS": [
+      {
+        "DATA_VERSION": "3.0",
+        "VENDOR_NAME": "string",
+        "PRODUCTS": [
           {
-            "vulnerable version string": "=/>/</<=/>=/!"
+            "PRODUCT_NAME": "string",
+            "VERSION": "string",
+            "AFFECTS": "string =/>/</<=/>=/!"
           }
         ]
       }
-    }
+    ]
   },
   "EXPLOITATION": {
     "DATA_VERSION": "3.0",
-    "DESCRIPTION": {
-      "eng": "Text data here",
-      "ger": "Textdaten hier",
-      "jpn": "ここにテキストデータ"
-    }
+    "DESCRIPTION": [
+      {
+        "DATA_VERSION": "3.0",
+        "LANG": "string ISO 639-2",
+        "VALUE": "string description of issue"
+      }
+    ]
   },
   "WORKAROUND": {
     "DATA_VERSION": "3.0",
-    "DESCRIPTION": {
-      "eng": "Text data here",
-      "ger": "Textdaten hier",
-      "jpn": "ここにテキストデータ"
+    "DESCRIPTION": [
+      {
+        "DATA_VERSION": "3.0",
+        "LANG": "string ISO 639-2",
+        "VALUE": "string description of issue"
+      }
+    ]
+  },
+  "NOTES": [
+    {
+      "DATA_VERSION": "3.0",
+      "LANG": "string ISO 639-2",
+      "VALUE": "string description of issue"
     }
-  },
-  "NOTES": {
-    "DATA_VERSION": "3.0",
-    "eng": "Text data here",
-    "ger": "Textdaten hier",
-    "jpn": "ここにテキストデータ"
-  },
+  ],
   "CREDIT": [
     {
       "DATA_VERSION": "3.0",
@@ -184,13 +207,15 @@
       "DATA_VERSION": "3.0",
       "TIMESTAMP": "DATE-TIMESTAMP",
       "REFERENCE": {
-        "type-of-id-string": "string"
+        "REFERENCE_NAME": "string",
+        "REFERENCE_VALUE": "string"
       },
-      "TEXT": {
-        "eng": "Text data here",
-        "ger": "Textdaten hier",
-        "jpn": "ここにテキストデータ"
-      }
+      "TEXT": [
+        {
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ]
     }
   ],
   "SOURCE": {
@@ -199,20 +224,22 @@
     "DISCOVERED_WITH": "string",
     "VERIFICATION": "string",
     "CNA_CHAIN": [
-      "initial CNA",
-      "parent CNA",
-      "root CNA"
+      "string initial CNA",
+      "string parent CNA",
+      "string root CNA"
     ]
   },
   "REFERENCES": [
     {
       "DATA_VERSION": "3.0",
       "NAME": "name of reference (can be URL)",
-      "DESCRIPTION": {
-        "eng": "String description of reference",
-        "ger": "String Beschreibung des Reference",
-        "jpn": "問題の説明文字列"
-      },
+      "DESCRIPTION": [
+        {
+          "DATA_VERSION": "3.0",
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ],
       "FILES": [
         {
           "URL": "URL to reference",
