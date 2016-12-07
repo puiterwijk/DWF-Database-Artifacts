@@ -10,13 +10,6 @@
   "ASSIGNER": "string: Assigner ID",
   "STATE": "string state of CVE",
   "REPLACED_BY": "string replaced by data",
-  "BRAND_NAME": [
-    {
-      "DATA_VERSION": "3.0",
-      "LANG": "string ISO 639-2",
-      "VALUE": "string brand name associated with the issue"
-    }
-  ],
   "TITLE": [
     {
       "DATA_VERSION": "3.0",
@@ -123,18 +116,20 @@
       "DATA_VERSION": "3.0"
     }
   },
-  "PROBLEM_TYPE": {
-    "DATA_VERSION": "3.0",
-    "CWE": "string",
-    "OWASP": "string",
-    "DESCRIPTION": [
-      {
-        "DATA_VERSION": "3.0",
-        "LANG": "string ISO 639-2",
-        "VALUE": "string description of issue"
-      }
-    ]
-  },
+  "PROBLEM_TYPE": [
+    {
+      "DATA_VERSION": "3.0",
+      "CWE": "string",
+      "OWASP": "string",
+      "DESCRIPTION": [
+        {
+          "DATA_VERSION": "3.0",
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ]
+    }
+  ],
   "AFFECTS": {
     "DATA_VERSION": "3.0",
     "CPE": [
@@ -165,26 +160,30 @@
       }
     ]
   },
-  "EXPLOITATION": {
-    "DATA_VERSION": "3.0",
-    "DESCRIPTION": [
-      {
-        "DATA_VERSION": "3.0",
-        "LANG": "string ISO 639-2",
-        "VALUE": "string description of issue"
-      }
-    ]
-  },
-  "WORKAROUND": {
-    "DATA_VERSION": "3.0",
-    "DESCRIPTION": [
-      {
-        "DATA_VERSION": "3.0",
-        "LANG": "string ISO 639-2",
-        "VALUE": "string description of issue"
-      }
-    ]
-  },
+  "EXPLOITATION": [
+    {
+      "DATA_VERSION": "3.0",
+      "DESCRIPTION": [
+        {
+          "DATA_VERSION": "3.0",
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ]
+    }
+  ],
+  "WORKAROUND": [
+    {
+      "DATA_VERSION": "3.0",
+      "DESCRIPTION": [
+        {
+          "DATA_VERSION": "3.0",
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ]
+    }
+  ],
   "NOTES": [
     {
       "DATA_VERSION": "3.0",
@@ -269,4 +268,3 @@
     }
   }
 }
-
