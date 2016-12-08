@@ -24,32 +24,34 @@
       "VALUE": "string description of issue"
     }
   ],
-  "ATTACK": {
-    "DATA_VERSION": "3.0",
-    "ATTACKERS": {
-      "EXTENT": "string",
-      "AUTHENTICATION": "string",
-      "USER_ASSISTANCE": "string"
-    },
-    "IMPACT": [
-      {
-        "DATA_VERSION": "3.0",
-        "LANG": "string ISO 639-2",
-        "VALUE": "string description of issue"
+  "ATTACK": [
+    {
+      "DATA_VERSION": "3.0",
+      "ATTACKERS": {
+        "EXTENT": "string",
+        "AUTHENTICATION": "string",
+        "USER_ASSISTANCE": "string"
+      },
+      "IMPACT": [
+        {
+          "DATA_VERSION": "3.0",
+          "LANG": "string ISO 639-2",
+          "VALUE": "string description of issue"
+        }
+      ],
+      "ATTACK_METHODS": {
+        "VECTORS": [
+          "string"
+        ],
+        "COMPONENTS": [
+          "string"
+        ],
+        "CAPECS": [
+          "string"
+        ]
       }
-    ],
-    "ATTACK_METHODS": {
-      "VECTORS": [
-        "string"
-      ],
-      "COMPONENTS": [
-        "string"
-      ],
-      "CAPECS": [
-        "string"
-      ]
     }
-  },
+  ],
   "IMPACT_METRICS": {
     "DATA_VERSION": "3.0",
     "CVSS": {
@@ -248,23 +250,5 @@
         }
       ]
     }
-  ],
-  "DWF": {
-    "VENDOR": {
-      "DATA_VERSION": "3.0",
-      "Example Vendor Name": {
-        "TITLE": "same as root",
-        "DESCRIPTION": "same as root",
-        "ATTACK": "same as root",
-        "IMPACT_METRICS": "same as root",
-        "PROBLEM_TYPE": "same as root",
-        "AFFECTS": "only used if conflicting",
-        "EXPLOITATION": "same as root",
-        "WORKAROUND": "same as root",
-        "NOTES": "same as root",
-        "CREDIT": "same as root",
-        "TIMELINE": "same as root"
-      }
-    }
-  }
+  ]
 }
