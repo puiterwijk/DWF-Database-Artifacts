@@ -1,0 +1,121 @@
+From b1b0871a922a49d0a64f248494f1628da8a2de93 Mon Sep 17 00:00:00 2001
+From: Patrick Uiterwijk <puiterwijk@redhat.com>
+Date: Fri, 5 Aug 2016 09:58:00 +0000
+Subject: [PATCH] Remove client certificate support code
+
+Resolves: CVE-2016-1000038
+---
+ NEWS                 | 10 ++++++++--
+ fas.spec             |  5 ++++-
+ fas/release.py       |  2 +-
+ fas/safasprovider.py | 33 +++++++++++++--------------------
+ 4 files changed, 26 insertions(+), 24 deletions(-)
+
+diff --git a/NEWS b/NEWS
+index d19af295..7a0716ce 100644
+--- a/NEWS
++++ b/NEWS
+@@ -4,8 +4,14 @@ NEWS
+ 
+ :Authors: Ricky Zhou, Mike McGrath, Toshio Kuratomi, Patrick Uiterwijk,
+           Ricky Elrod, Xavier Lamien
+-:Date: 11 March 2016
+-:Version: 0.12.0
++:Date: 08 August 2016
++:Version: 0.13.0
++
++
++------
++0.13.0
++------
++* Fix authentication bypass due to client cert headers (CVE-2016-1000038)
+ 
+ ------
+ 0.12.0
+diff --git a/fas.spec b/fas.spec
+index 13b327de..3d11fdf2 100644
+--- a/fas.spec
++++ b/fas.spec
+@@ -1,7 +1,7 @@
+ %{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
+ 
+ Name:           fas
+-Version:        0.12.0
++Version:        0.13.0
+ Release:        1%{?dist}
+ Summary:        Fedora Account System
+ 
+@@ -153,6 +153,9 @@ cp -pr updates/ %{buildroot}%{_datadir}/fas
+ %attr(0700,root,root) %dir %{_localstatedir}/lib/fas
+ 
+ %changelog
++* Mon Aug 8 2016 Patrick Uiterwijk <puiterwijk@redhat.com> - 0.13.0-1
++- Fixed authentication bypass (CVE-2016-1000038)
++
+ * Fri Mar 11 2016 Patrick Uiterwijk <puiterwijk@redhat.com> - 0.12.0-1
+ - Add hook points into anti-spam script on account creation and CLA signing
+ 
+diff --git a/fas/release.py b/fas/release.py
+index d568c204..acbc7121 100644
+--- a/fas/release.py
++++ b/fas/release.py
+@@ -25,7 +25,7 @@
+ Release information about the Fedora Accounts System
+ '''
+ 
+-VERSION = '0.12.0'
++VERSION = '0.13.0'
+ NAME = 'fas'
+ DESCRIPTION = 'The Fedora Account System'
+ LONG_DESCRIPTION = '''
+diff --git a/fas/safasprovider.py b/fas/safasprovider.py
+index 853ee7b0..10159be8 100644
+--- a/fas/safasprovider.py
++++ b/fas/safasprovider.py
+@@ -368,12 +368,6 @@ def validate_identity(self, user_name, password, visit_key, otp=None):
+         cherrypy.request.fas_identity_failure_reason = None
+         using_ssl = False
+ 
+-        if not user_name:
+-            if cherrypy.request.headers['X-Client-Verify'] == 'SUCCESS':
+-                user_name = cherrypy.request.headers['X-Client-CN']
+-                cherrypy.request.fas_provided_username = user_name
+-                using_ssl = True
+-
+         email_domain = '@' + config.get('email_host', '')
+         if email_domain != '@' and user_name.endswith(email_domain):
+             user_name = user_name[:-len(email_domain)]
+@@ -394,20 +388,19 @@ def validate_identity(self, user_name, password, visit_key, otp=None):
+             cherrypy.request.fas_identity_failure_reason = 'status_%s'% user.status
+             return None
+ 
+-        if not using_ssl:
+-            # Get extras args from request params to increase auth check
+-            # then pop it out if found to don't mess with other object's method
+-            if 'otp' in cherrypy.request.params:
+-                otp = cherrypy.request.params.pop('otp')
+-
+-            if not self.validate_password(user, user_name, password, otp):
+-                log.info("Passwords don't match for user: %s", user_name)
+-                cherrypy.request.fas_identity_failure_reason = 'bad_password'
+-                return None
+-            # user + password is sufficient to prove the user is in
+-            # control
+-            cherrypy.request.params['_csrf_token'] = hash_constructor(
+-                    visit_key).hexdigest()
++        # Get extras args from request params to increase auth check
++        # then pop it out if found to don't mess with other object's method
++        if 'otp' in cherrypy.request.params:
++            otp = cherrypy.request.params.pop('otp')
++
++        if not self.validate_password(user, user_name, password, otp):
++            log.info("Passwords don't match for user: %s", user_name)
++            cherrypy.request.fas_identity_failure_reason = 'bad_password'
++            return None
++        # user + password is sufficient to prove the user is in
++        # control
++        cherrypy.request.params['_csrf_token'] = hash_constructor(
++                visit_key).hexdigest()
+ 
+         log.info("Associating user (%s) with visit (%s)",
+             user_name, visit_key)
